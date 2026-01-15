@@ -9,8 +9,7 @@ def kitap_sil(kitap_adi):
         kitaplar.remove(kitap_adi)
         print(f"❌ Silindi: {kitap_adi}")
     else:
-        print(f"⚠️ Hata: '{kitap_adi}' listede bulunamadı!")
-
+        print(f"⚠️ Hata: '{kitap_adi}' listemizde yok!")
 
 def kitap_listele():
     print("\n📚 KÜTÜPHANE LİSTESİ 📚")
@@ -20,25 +19,10 @@ def kitap_listele():
         for kitap in kitaplar:
             print(f"- {kitap}")
 
-# Test edelim
-if __name__ == "__main__":
-    kitap_ekle("Nutuk")
-    kitap_sil("Nutuk")
-    kitap_listele()
-    kitap_ekle("Küçük Prens")
-    kitap_listele()
-def kitap_sil(kitap_adi):
-    if kitap_adi in kitaplar:
-        kitaplar.remove(kitap_adi)
-        print(f"❌ Silindi: {kitap_adi}")
-    else:
-        print(f"⚠️ Hata: '{kitap_adi}' listemizde yok!")
-
-# Dosyanın en altındaki test kısmını şöyle güncelle:
 if __name__ == "__main__":
     kitap_ekle("Nutuk")
     kitap_ekle("Küçük Prens")
     kitap_listele()
     
-    kitap_sil("Nutuk") # Silme özelliğini test ediyoruz
+    kitap_sil("Nutuk")
     kitap_listele()
